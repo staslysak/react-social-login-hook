@@ -59,7 +59,7 @@ export const getGoogleUri = ({
 };
 
 export const getLinkedInUri = ({
-    scope = 'r_emailaddress',
+    scope = 'r_liteprofile',
     clientId,
     redirectUri = '',
     state,

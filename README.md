@@ -3,7 +3,8 @@
 Not at npm registry yet
 
 ## Supported providers
-`GitHub` 
+
+`GitHub`
 
 `LinkedIn`
 
@@ -122,7 +123,6 @@ Callback for errors raised during login.
 $ npm start
 ```
 
-
 ## Useful links
 
 [GitHub login](https://developer.github.com/v3/oauth/)
@@ -132,3 +132,78 @@ $ npm start
 [Facebook login](https://developers.facebook.com/docs/facebook-login/manually-build-a-login-flow/)
 
 [Google login](https://developers.google.com/identity/protocols/oauth2/web-server)
+
+### Social login flow
+
+## LinkedIn login flow
+
+-   Get code
+
+-   Exchage code for token
+
+POST https://www.linkedin.com/oauth/v2/accessToken
+
+Params:
+
+`{client_id}`
+`{client_secret}`
+`{code}`
+`{redirect_uri}`
+`{grant_type}` = authorization_code
+
+-   Get profile
+
+GET https://api.linkedin.com/v2/me
+
+Headers:
+
+`{Authorization}` = Bearer `{access_token}`
+
+## Facebook login flow
+
+-   Get code
+
+-   Exchage code for token
+
+GET https://graph.facebook.com/v10.0/oauth/access_token
+
+Params:
+
+`{client_id}`
+`{client_secret}`
+`{code}`
+`{redirect_uri}`
+
+-   Get profile
+
+GET https://graph.facebook.com/me
+
+Params:
+
+`{fields}` = id,name,email,picture.type(large)
+`{access_token}`
+
+## Google login flow
+
+-   Get code
+
+-   Exchage code for token
+
+POST https://oauth2.googleapis.com/token
+
+Params:
+
+`{client_id}`
+`{client_secret}`
+`{code}`
+`{redirect_uri}`
+`{grant_type}` = authorization_code
+
+-   Get profile
+
+GET https://www.googleapis.com/oauth2/v1/userinfo
+
+Params:
+
+`{alt}` = json
+`{access_token}`
