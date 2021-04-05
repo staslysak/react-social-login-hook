@@ -1,5 +1,8 @@
-/.circleci
+.parcel-cache
 /coverage
+/dist/index.*.js
+/dist/index.*.js.map
+/dist/index.html
 /example
 /src/__tests__
 /yarn.lock

@@ -1,6 +1,15 @@
-# React Social Login
+# React Social Login Hook
 
-React component for [GitHub login](https://developer.github.com/v3/oauth/).
+Not at npm registry yet
+
+## Supported providers
+`GitHub` 
+
+`LinkedIn`
+
+`Google`
+
+`Facebook`
 
 ## Usage
 
@@ -112,3 +121,14 @@ Callback for errors raised during login.
 ```sh
 $ npm start
 ```
+
+
+## Useful links
+
+[GitHub login](https://developer.github.com/v3/oauth/)
+
+[LinkedIn login](https://docs.microsoft.com/en-us/linkedin/shared/authentication/authorization-code-flow?tabs=https)
+
+[Facebook login](https://developers.facebook.com/docs/facebook-login/manually-build-a-login-flow/)
+
+[Google login](https://developers.google.com/identity/protocols/oauth2/web-server)
