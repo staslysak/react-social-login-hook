@@ -1,0 +1,7 @@
+.parcel-cache
+/coverage
+/dist/index.*.js
+/dist/index.*.js.map
+/dist/index.html
+/node_modules
+/npm-debug.log
