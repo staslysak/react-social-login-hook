@@ -2,13 +2,15 @@ import React from 'react';
 import { render } from 'react-dom';
 import { useSocialLogin } from '../src';
 
-const onSuccess = (response) => console.log(response);
-const onFailure = (response) => console.error(response);
+const onSuccess = (response) => console.log('response', response);
+const onFailure = (response) => console.log('error', response);
 
 const App = () => {
     const handleGithub = useSocialLogin({
         provider: 'github',
         clientId: 'YOUR_GITHUB_CLIENT_ID',
+        redirectUri: window.location.origin,
+        state: 'fasdg123asdfads',
         onSuccess,
         onFailure,
     });
